@@ -1,0 +1,5 @@
+services:
+  homework-06:
+    build:
+      context: .
+      dockerfile: Dockerfile
