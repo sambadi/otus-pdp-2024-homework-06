@@ -31,9 +31,7 @@ class OrderORM(Base):
     __tablename__ = "orders"
     id = Column(Integer, primary_key=True)
     customer_id = Column(Integer, ForeignKey("customers.id"))
-    customer: "CustomerORM" = relationship(
-        "CustomerORM", cascade="all,delete-orphan", lazy="dynamic"
-    )
+    customer: "CustomerORM" = relationship("CustomerORM")
     products: list["ProductORM"] = relationship(
         "ProductORM", secondary=order_product_assocoations
     )
