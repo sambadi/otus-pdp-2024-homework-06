@@ -12,6 +12,7 @@ jobs:
       - uses: astral-sh/ruff-action@v1
       - uses: jpetrucciani/mypy-check@master
         with:
+          python_version: 3.12
           requirements: 'sqlalchemy[mypy]==1.4.54'
       - name: install poetry
         uses: abatilo/actions-poetry@v2.0.0
